@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — Livora Interiors</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="header">
+    <a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27c0-7 5-11 9-13-1.4 7-5.2 10.4-9 13Z" fill="#2F4A3C"/><path d="M16 27c0-7-5-11-9-13 1.4 7 5.2 10.4 9 13Z" fill="#3D5A4A"/><path d="M16 27V7" stroke="#2F4A3C" stroke-width="1.4" stroke-linecap="round"/></svg><span class="logo-lockup"><span class="logo-name">Livora</span><span class="logo-sub">Interiors</span></span></a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a><a href="shop.html" aria-current="page">Shop</a><a href="collections.html">Collections</a><a href="rooms.html">Rooms</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a><a href="blog.html">Blog</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" type="button" id="open-search" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button class="icon-btn" type="button" id="open-cart" aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 7h15l-1.5 9h-12L5 4H2"/><circle cx="9" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg><span class="cart-count" id="cart-count">0</span></button>
+      <button class="btn btn-primary" type="button" data-open="consult">Book a Consultation</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <header class="subhero">
+      <p class="eyebrow"><span class="diamond"></span> The shop</p>
+      <h1>All products</h1>
+      <p class="muted">Fourteen pieces in oak, linen, and forest green. Each one opens on its own page.</p>
+    </header>
+    <div class="filters" role="toolbar" aria-label="Filter products">
+      <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter" data-filter="seating" aria-pressed="false">Seating</button>
+      <button type="button" class="filter" data-filter="tables" aria-pressed="false">Tables</button>
+      <button type="button" class="filter" data-filter="sleep" aria-pressed="false">Sleep</button>
+      <button type="button" class="filter" data-filter="storage" aria-pressed="false">Storage</button>
+      <button type="button" class="filter" data-filter="light" aria-pressed="false">Light</button>
+      <button type="button" class="filter" data-filter="work" aria-pressed="false">Work</button>
+    </div>
+    <div class="catalog" id="catalog">
+      <a class="product-card" href="product.html?id=liora" id="best" data-group="seating"><img src="images/chair.jpg" alt="Liora Lounge Chair in forest green velvet"><div><h2 class="serif">Liora Lounge Chair</h2><p class="price">$599</p><p class="muted">Best seller · forest green velvet</p></div></a>
+      <a class="product-card" href="product.html?id=marlow" id="new" data-group="seating"><img src="images/sofa.jpg" alt="Marlow three-seat sofa in oatmeal linen"><div><h2 class="serif">Marlow Sofa</h2><p class="price">$2,480</p><p class="muted">New arrival · oatmeal linen</p></div></a>
+      <a class="product-card" href="product.html?id=calla" data-group="seating"><img src="images/dining-chair.jpg" alt="Calla dining chair in oak with a linen seat"><div><h2 class="serif">Calla Dining Chair</h2><p class="price">$420</p><p class="muted">Oak frame, linen cushion</p></div></a>
+      <a class="product-card" href="product.html?id=alden" data-group="tables"><img src="images/coffee.jpg" alt="Alden round oak coffee table"><div><h2 class="serif">Alden Coffee Table</h2><p class="price">$890</p><p class="muted">Solid pale oak</p></div></a>
+      <a class="product-card" href="product.html?id=wren" data-group="tables"><img src="images/dining-table.jpg" alt="Wren round oak dining table"><div><h2 class="serif">Wren Dining Table</h2><p class="price">$1,640</p><p class="muted">Round oak pedestal</p></div></a>
+      <a class="product-card" href="product.html?id=soren" data-group="sleep"><img src="images/bed.jpg" alt="Soren oak bed with a linen headboard"><div><h2 class="serif">Soren Bed</h2><p class="price">$2,190</p><p class="muted">Oak platform, linen headboard</p></div></a>
+      <a class="product-card" href="product.html?id=hale" id="sale" data-group="storage"><img src="images/sideboard.jpg" alt="Hale fluted oak sideboard"><div><h2 class="serif">Hale Sideboard</h2><p class="price">$1,280</p><p class="muted">Fluted oak, darkened base</p></div></a>
+      <a class="product-card" href="product.html?id=bramble" data-group="light"><img src="images/lamp.jpg" alt="Bramble arched floor lamp"><div><h2 class="serif">Bramble Floor Lamp</h2><p class="price">$540</p><p class="muted">Blackened brass, linen shade</p></div></a>
+      <a class="product-card" href="product.html?id=elowen" data-group="work"><img src="images/desk.jpg" alt="Elowen oak desk with a leather top"><div><h2 class="serif">Elowen Desk</h2><p class="price">$980</p><p class="muted">Oak, cognac leather</p></div></a>
+      <a class="product-card" href="product.html?id=linden" data-group="storage"><img src="images/nightstand.jpg" alt="Linden oak nightstand"><div><h2 class="serif">Linden Nightstand</h2><p class="price">$460</p><p class="muted">Pale oak, one drawer</p></div></a>
+      <a class="product-card" href="product.html?id=willa" data-group="light"><img src="images/bedside.jpg" alt="Willa ceramic bedside lamp"><div><h2 class="serif">Willa Bedside Lamp</h2><p class="price">$240</p><p class="muted">Cream ceramic, linen shade</p></div></a>
+      <a class="product-card" href="product.html?id=fern" data-group="work"><img src="images/desk-chair.jpg" alt="Fern desk chair in forest green velvet"><div><h2 class="serif">Fern Desk Chair</h2><p class="price">$680</p><p class="muted">Forest green velvet, oak legs</p></div></a>
+      <a class="product-card" href="product.html?id=rowan" data-group="storage"><img src="images/shelf.jpg" alt="Rowan pale oak bookcase"><div><h2 class="serif">Rowan Shelf</h2><p class="price">$720</p><p class="muted">Three open oak shelves</p></div></a>
+      <a class="product-card" href="product.html?id=quill" data-group="light"><img src="images/desk-lamp.jpg" alt="Quill brass desk lamp"><div><h2 class="serif">Quill Desk Lamp</h2><p class="price">$220</p><p class="muted">Brass stem, pleated shade</p></div></a>
+    </div>
+  </main>
+  <dialog id="search"><button class="dialog-close" type="button" data-close>Close</button><h2>Search</h2><label>Find a piece<input id="search-input" type="search"></label><div class="search-list" id="search-list"></div></dialog>
+  <dialog id="cart"><button class="dialog-close" type="button" data-close>Close</button><h2>Your cart</h2><div id="cart-body"></div></dialog>
+  <dialog id="consult">
+    <button class="dialog-close" type="button" data-close>Close</button>
+    <h2>Book a consultation</h2>
+    <p class="muted">Tell us the room. This preview keeps your note in the browser.</p>
+    <form id="consult-form">
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Room
+        <select name="room">
+          <option>Living room</option>
+          <option>Bedroom</option>
+          <option>Dining room</option>
+          <option>Home office</option>
+        </select>
+      </label>
+      <button class="btn btn-primary" type="submit">Request a time <span class="arrow">→</span></button>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
