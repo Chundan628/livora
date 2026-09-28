@@ -49,20 +49,20 @@ document.getElementById("open-cart")?.addEventListener("click", () => {
 });
 
 const catalog = [
-  { name: "Liora Lounge Chair", href: "product.html?id=liora", hint: "Forest green velvet · $599" },
-  { name: "Marlow Sofa", href: "product.html?id=marlow", hint: "Oatmeal linen · $2,480" },
-  { name: "Calla Dining Chair", href: "product.html?id=calla", hint: "Oak and linen · $420" },
-  { name: "Alden Coffee Table", href: "product.html?id=alden", hint: "Pale oak · $890" },
-  { name: "Wren Dining Table", href: "product.html?id=wren", hint: "Round oak · $1,640" },
-  { name: "Soren Bed", href: "product.html?id=soren", hint: "Linen and oak · $2,190" },
-  { name: "Hale Sideboard", href: "product.html?id=hale", hint: "Fluted oak · $1,280" },
-  { name: "Bramble Floor Lamp", href: "product.html?id=bramble", hint: "Brass and linen · $540" },
-  { name: "Elowen Desk", href: "product.html?id=elowen", hint: "Oak and leather · $980" },
-  { name: "Linden Nightstand", href: "product.html?id=linden", hint: "Bedroom · pale oak · $460" },
-  { name: "Willa Bedside Lamp", href: "product.html?id=willa", hint: "Bedroom · ceramic · $240" },
-  { name: "Fern Desk Chair", href: "product.html?id=fern", hint: "Home office · velvet · $680" },
-  { name: "Rowan Shelf", href: "product.html?id=rowan", hint: "Home office · oak · $720" },
-  { name: "Quill Desk Lamp", href: "product.html?id=quill", hint: "Home office · brass · $220" },
+  { name: "Liora Lounge Chair", href: "product.html?id=liora", hint: "Forest green velvet" },
+  { name: "Marlow Sofa", href: "product.html?id=marlow", hint: "Oatmeal linen" },
+  { name: "Calla Dining Chair", href: "product.html?id=calla", hint: "Oak and linen" },
+  { name: "Alden Coffee Table", href: "product.html?id=alden", hint: "Pale oak" },
+  { name: "Wren Dining Table", href: "product.html?id=wren", hint: "Round oak" },
+  { name: "Soren Bed", href: "product.html?id=soren", hint: "Linen and oak" },
+  { name: "Hale Sideboard", href: "product.html?id=hale", hint: "Fluted oak" },
+  { name: "Bramble Floor Lamp", href: "product.html?id=bramble", hint: "Brass and linen" },
+  { name: "Elowen Desk", href: "product.html?id=elowen", hint: "Oak and leather" },
+  { name: "Linden Nightstand", href: "product.html?id=linden", hint: "Bedroom · pale oak" },
+  { name: "Willa Bedside Lamp", href: "product.html?id=willa", hint: "Bedroom · ceramic" },
+  { name: "Fern Desk Chair", href: "product.html?id=fern", hint: "Home office · velvet" },
+  { name: "Rowan Shelf", href: "product.html?id=rowan", hint: "Home office · oak" },
+  { name: "Quill Desk Lamp", href: "product.html?id=quill", hint: "Home office · brass" },
   { name: "Modular Sofa Collection", href: "collections.html", hint: "Spring / Summer 2024" },
   { name: "Living Room", href: "rooms.html#living", hint: "Shop by room" },
   { name: "Bedroom", href: "rooms.html#bedroom", hint: "Shop by room" },
@@ -198,14 +198,6 @@ function showReviews(index) {
 document.getElementById("review-next")?.addEventListener("click", () => showReviews(reviewIndex + 1));
 document.getElementById("review-prev")?.addEventListener("click", () => showReviews(reviewIndex - 1));
 
-const newsForm = document.getElementById("news-form");
-newsForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const note = document.getElementById("news-note");
-  if (note) note.hidden = false;
-  newsForm.reset();
-});
-
 document.getElementById("contact-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const form = event.currentTarget;
@@ -282,9 +274,7 @@ function renderCart() {
     meta.className = "muted";
     meta.textContent = `${item.color} · Qty ${item.qty}`;
     name.append(strong, meta);
-    const price = document.createElement("div");
-    price.textContent = money(item.price * item.qty);
-    row.append(name, price);
+    row.append(name);
     body.append(row);
   });
   const clear = document.createElement("button");
@@ -332,7 +322,6 @@ function showProduct() {
   image.alt = chairColor ? `Liora Lounge Chair in ${chairColor.toLowerCase()} velvet` : product.name;
   document.getElementById("product-category").textContent = product.category;
   document.getElementById("product-name").textContent = product.name;
-  document.getElementById("product-price").textContent = money(product.price);
   document.getElementById("product-copy").textContent = product.copy;
   document.title = product.name + " — Livora Interiors";
   const swatches = document.getElementById("product-swatches");
